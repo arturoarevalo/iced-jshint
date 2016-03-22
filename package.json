@@ -1,0 +1,32 @@
+{
+	"name": "iced-jshint",
+	"version": "0.2.0",
+	"description": "Checks IcedCoffeeScript source for errors using JSHint",
+	"engines": {
+    	"node": ">=0.8.x"
+  	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepublish": "rm -rf lib && mkdir lib && iced -b -c -o lib/ -I node src/cli.iced && iced -b -c -o lib/ -I node src/hint.iced"
+	},
+	"bin": {
+		"iced-jshint": "./index.js",
+		"coffee-jshint": "./index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/arturoarevalo/iced-jshint.git"
+	},
+	"author": "Arturo Arévalo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/arturoarevalo/iced-jshint/issues"
+	},
+	"homepage": "https://github.com/arturoarevalo/iced-jshint#readme",
+	"dependencies": {
+		"iced-coffee-script": "^108.0.9",
+		"jshint": "^2.9.1",
+		"optimist": "^0.6.1",
+		"underscore": "^1.8.3"
+	}
+}
